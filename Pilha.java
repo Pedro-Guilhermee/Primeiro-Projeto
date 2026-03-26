@@ -1,19 +1,21 @@
-public class Pilha<Integer> {
-    private int elementos[];
+package ProjSistemaEmergencia;
+
+public class Pilha {
+    private Chamado elementos[];
     private int topo;
 
-    public Pilha(int numero) {
-        this.elementos = new int[numero];
+    public Pilha(Chamado chamadoPilha) {
+        this.elementos = new Chamado[chamadoPilha];
         this.topo = -1;
     }
 
-    public void push(int numero) {
+    public void push(Chamado chamadoPilha) {
         topo++;
-        elementos[topo] = numero;
+        elementos[topo] = chamadoPilha;
     }
 
-    public int pop() {
-        int valor = elementos[topo];
+    public Chamado pop() {
+        Chamado valor = elementos[topo];
         topo--;
         return valor;
     }
@@ -31,11 +33,11 @@ public class Pilha<Integer> {
             System.out.println("Posicao [" + i + "] = " + elementos[i] + " da pilha " + nomePilha);
         }
     }
-    public int[] getElementos() {
+    public Chamado[] getElementos() {
         return elementos;
     }
 
-    public void setElementos(int[] elementos) {
+    public void setElementos(Chamado[] elementos) {
         this.elementos = elementos;
     }
 

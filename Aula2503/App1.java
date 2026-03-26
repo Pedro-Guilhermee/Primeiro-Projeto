@@ -1,0 +1,28 @@
+package Aula2503;
+
+import java.util.*;
+import java.io.IOException;
+import java.nio.file.*;
+
+
+class LeitorSeries{
+    public static List<String> ler (String nomeArq){
+        List<String> series;
+        Path arquivo;
+        arquivo = Paths.get(nomeArq);
+        try {
+            series = Files.readAllLines(arquivo);
+        } catch (IOException ex) {
+           series = new ArrayList<>();
+           System.out.println("Erro ao acessar arquivo!");
+        }
+        
+        return series;
+    }
+
+}
+public class App1{
+    public static void main(String[] args){
+        System.out.println(LeitorSeries.ler("series.txt"));
+    }
+}

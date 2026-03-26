@@ -7,12 +7,12 @@ public class Chamado {
     private int nivelUrgencia;
     private String status;
 
-    public Chamado(int id, String bairro, String descricao, int nivelUrgencia, String status) {
+    public Chamado( int id, String bairro, String descricao, int nivelUrgencia) {
         this.id = id;
         this.bairro = bairro;
         this.descricao = descricao;
         this.nivelUrgencia = nivelUrgencia;
-        this.status = status;
+        this.status = "Aberto";
     }
 
     public int getId() {
