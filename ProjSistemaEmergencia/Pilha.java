@@ -1,11 +1,10 @@
 package ProjSistemaEmergencia;
-
 public class Pilha {
     private Chamado elementos[];
     private int topo;
 
-    public Pilha(Chamado chamadoPilha) {
-        this.elementos = new Chamado[chamadoPilha];
+    public Pilha(int tamanhoPilha) {
+        this.elementos = new Chamado[tamanhoPilha];
         this.topo = -1;
     }
 
@@ -20,6 +19,11 @@ public class Pilha {
         return valor;
     }
     
+    public Chamado topo(){
+        if (!) {
+            
+        }
+    }
     public int sizeElements() {
         return this.topo + 1;
     }

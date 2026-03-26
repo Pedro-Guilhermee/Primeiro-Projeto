@@ -5,8 +5,8 @@ public class Fila {
     private int inicio;
     private int fim;
     private int tamanho;
-    public Fila(Chamado chamadoFila) {
-        elementos = new Chamado[chamadoFila];
+    public Fila(int tamanhoFila) {
+        elementos = new Chamado[tamanhoFila];
         inicio = 0;
         fim = -1;
         tamanho = 0;
@@ -32,9 +32,9 @@ public class Fila {
         tamanho--;
         return valor;
     }
-    public int peek() {
+    public Chamado peek() {
         if (isEmpty()) {
-            return -1;
+            return null;
         }
         return elementos[inicio];
     }

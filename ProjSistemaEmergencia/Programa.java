@@ -9,10 +9,10 @@ public class Programa
         Chamado chamado;
         Scanner sc = new Scanner(System.in);
         System.out.println("Deseja abrir um chamado: (S/N)?");
-        String opcChamado = sc.nextLine();
+        char opcChamado = sc.next().toUpperCase().charAt(0);
         sc.nextLine();
         int id = 1;
-        while (opcChamado.equalsIgnoreCase("S")) {
+        while (opcChamado == 'S') {
             System.out.println("Digite o bairro do paciente:");
             String bairroDigitado = sc.nextLine();
             System.out.println("Digite a descrição do paciente:");
@@ -23,7 +23,7 @@ public class Programa
             chamadoDao.novoChamado(chamado);
             id++;
             System.out.println("Deseja abrir um chamado: (S/N)?");
-            opcChamado = sc.nextLine();
+            opcChamado = sc.next().toUpperCase().charAt(0);
         }
         
     }

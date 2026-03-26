@@ -21,18 +21,20 @@ public class ChamadoDAO {
         } else if(chamado.getNivelUrgencia() < 4){
             filaChamados.enqueue(chamado);
         }
+        historico.add(chamado);
     }
 
-    public void atenderProxChamado(Chamado proximoChamado) {
+    public void atenderProxChamado() {
     // Se houver emergência → desempilha
     // Senão → desenfileira
     // Move para Lista Linear de atendimentos ativos
-        if (proximoChamado.getNivelUrgencia() >= 4) {
-            pilhaChamados.pop();
-        } else if(proximoChamado.getNivelUrgencia() < 4){
-            filaChamados.dequeue();
+        Chamado chamadoPilha = pilhaChamados.pop();
+        Chamado chamadoFila = filaChamados.dequeue();
+        if (chamadoPilha.getNivelUrgencia() >= 4) {
+            atendimentoAtivo.add(chamadoPilha);
+        } else if(chamadoFila.getNivelUrgencia() < 4){
+            atendimentoAtivo.add(chamadoFila);
         }
-        atendimentoAtivo.add(proximoChamado);
     }
 
     public void finalizarAtendimento() {
