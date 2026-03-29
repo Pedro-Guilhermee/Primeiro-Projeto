@@ -8,10 +8,6 @@ public class ChamadoDAO {
     private ArrayList<Chamado> historico = new ArrayList<>();
     private ArrayList<Chamado> atendimentoAtivo = new ArrayList<>();
 
-    public ChamadoDAO(){
-        
-    }
-
     public void novoChamado(Chamado chamado) {
     // Se urgência ≥ 4 → vai para PILHA de emergência
     // Se urgência < 4 → vai para FILA comum
