@@ -12,9 +12,14 @@ public class Chamado {
         this.bairro = bairro;
         this.descricao = descricao;
         this.nivelUrgencia = nivelUrgencia;
-        this.status = "Aberto";
+        this.status = "ABERTO";
     }
-
+    
+    @Override
+    public String toString() {
+        
+        return "ID: " + id + " | Bairro: " + bairro + " | Descrição: " + descricao + " | Nével de urgência: " + nivelUrgencia + " | Status: " + status;
+    }
     public int getId() {
         return id;
     }
