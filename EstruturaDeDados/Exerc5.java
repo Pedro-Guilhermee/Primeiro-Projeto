@@ -13,8 +13,8 @@ public class Exerc5 {
                 n = s.nextInt();
                 p.push(n);
             }
-        } while( resp == 'S’);
+        } while( resp == 'S');
          
-        } 
-    }
-}        
+    } 
+}
+        

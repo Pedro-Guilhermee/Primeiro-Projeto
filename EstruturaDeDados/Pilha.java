@@ -9,7 +9,7 @@ public class Pilha<T> {
     private ArrayList<T> itens;
 
     // Construtor
-    public Pilha() {
+    public Pilha(int tamanho) {
         this.itens = new ArrayList<>();
     }
 
@@ -53,22 +53,5 @@ public class Pilha<T> {
     @Override
     public String toString() {
         return "Pilha: " + itens.toString();
-    }
-
-    // Método principal para testes
-    public static void main(String[] args) {
-        Pilha<Integer> p = new Pilha<>();
-
-        p.push(10);
-        p.push(20);
-        p.push(30);
-
-        System.out.println(p); // Pilha: [10, 20, 30]
-        System.out.println("Topo: " + p.peek()); // 30
-        
-        System.out.println("Removendo: " + p.pop()); // 30
-        System.out.println("Novo topo: " + p.peek()); // 20
-        
-        System.out.println("Tamanho atual: " + p.size()); // 2
     }
 }
